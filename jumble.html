@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Twister</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 10;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .container{
+            height: 400px;
+            width: 400px;
+            background-color: lightgray;
+            border-radius: 10px;
+        }
+        .padd{
+            padding: 30px;
+        }
+
+        .score{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .jumbled{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 40px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .user-input{
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .inp{
+            height: 40px;
+            font-size: 20px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            text-indent: 20px;
+            outline: none;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        .btn{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: indianred;
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase ;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="padd">
+            <div class="score">
+                <p id="score">0</p>
+            </div>
+        
+            <div class="jumbled">
+                <p id="j-word"></p>
+            </div>
+        
+            <div class="user-input">
+                <input type="text" class="inp" id="inp" placeholder="Correct Word"/>
+                <button class="btn" onclick="checkAnswer()">Submit</button>
+            </div>
+        </div>
+    </div>  
+
+    <script src="jumble.js"></script>
+    
+</body>
+</html>
